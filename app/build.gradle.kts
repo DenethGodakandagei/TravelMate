@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.travelmate"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.travelmate"
