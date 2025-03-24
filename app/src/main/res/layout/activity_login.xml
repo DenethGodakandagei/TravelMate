@@ -28,6 +28,7 @@
             android:layout_width="184dp"
             android:layout_height="78dp"
             android:layout_gravity="center"
+            android:layout_marginTop="50dp"
             app:srcCompat="@drawable/logo" />
 
         <TextView
@@ -35,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
             android:text="TRAVEL MATE"
             android:textColor="@color/colorPrimary"
@@ -77,9 +79,12 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:backgroundTint="@color/colorPrimary"
-            android:textSize="24sp"
-            android:text="Signin" />
+            android:text="Signin"
+            android:textSize="24sp" />
         <TextView
             android:id="@+id/signuphere"
             android:layout_width="match_parent"
