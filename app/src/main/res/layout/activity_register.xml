@@ -5,23 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
     android:layout_marginTop="20dp"
     tools:context=".Register">
 
     <!-- Logo and Title -->
+
+    <!-- Form Fields -->
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="20dp">
+
+        <!-- Email Label -->
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="44dp"
             android:layout_height="38dp"
+            android:layout_gravity="center"
             android:layout_marginStart="10dp"
             app:srcCompat="@drawable/logo" />
 
@@ -29,26 +32,59 @@
             android:id="@+id/travelmate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:text="TRAVEL MATE"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </LinearLayout>
 
-    <!-- Form Fields -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginTop="80dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo">
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Create An Account"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <!-- Email Label -->
+        <TextView
+            android:id="@+id/frist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Frist Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/fristname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter your Frist name"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/last"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter your Last name"
+            android:inputType="textEmailAddress" />
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,11 +122,13 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/colorPrimary"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:text="Sign Up"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
@@ -103,7 +141,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="Already have an account? Sign In"
-            android:textColor="@color/colorPrimary"
             android:textSize="14sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
