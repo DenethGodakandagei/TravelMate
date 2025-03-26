@@ -8,12 +8,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class Home : AppCompatActivity() {
+class Explore : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_explore)
 
+        // Set up the BottomNavigationView to navigate between activities
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
@@ -22,14 +23,11 @@ class Home : AppCompatActivity() {
                     // Navigate to Home activity
                     val homeIntent = Intent(this, Home::class.java)
                     startActivity(homeIntent)
-                    finish()
+                    finish()  // Close current activity (Explore) to avoid stacking
                     true
                 }
                 R.id.nav_explore -> {
-                    val homeIntent = Intent(this, Explore::class.java)
-                    startActivity(homeIntent)
-                    finish()
-
+                    // You are already in Explore activity, so no need to start a new one
                     true
                 }
                 R.id.nav_payment -> {
@@ -47,7 +45,7 @@ class Home : AppCompatActivity() {
         // Optional: Set the default selected item in BottomNavigationView (Home)
         bottomNavigationView.selectedItemId = R.id.nav_explore
 
-
+        // Handle system bar insets for edge-to-edge layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
