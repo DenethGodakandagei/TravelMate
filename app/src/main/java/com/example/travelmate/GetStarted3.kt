@@ -3,6 +3,7 @@ package com.example.travelmate
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,6 +17,11 @@ class GetStarted3 : AppCompatActivity() {
 
         val btnNavigate: Button = findViewById(R.id.Start)
         btnNavigate.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+        }
+        val btnSkip: TextView = findViewById(R.id.skip)
+        btnSkip.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
