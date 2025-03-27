@@ -28,6 +28,15 @@
         android:textStyle="bold" />
     <!-- Main Content: Horizontal Card Layout -->
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:padding="8dp"
+        android:queryHint="Search..."
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
@@ -38,25 +47,38 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mirissa" />
+        android:layout_margin="10dp"
+        android:text="Mirissa"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <SearchView
+    <TextView
+        android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search..."
-        android:iconifiedByDefault="false"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:padding="8dp" />
+        android:layout_margin="20dp"
+        android:text="Mirissa Beach in Sri Lanka is a beautiful place with golden sand, blue water, and palm trees. It’s great for swimming, surfing, and watching whales. The sunsets are amazing, and it’s a perfect spot to relax and enjoy. 🌴🏖️✨"
+        android:textSize="16sp" />
 
-
-    <!-- Bottom Navigation -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+    <TextView
+        android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_margin="20dp"
+        android:text="$420"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Booknow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Book now"
+        android:textSize="24sp" />
 
 
 </LinearLayout>

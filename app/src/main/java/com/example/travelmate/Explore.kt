@@ -2,6 +2,7 @@ package com.example.travelmate
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,36 +15,12 @@ class Explore : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_explore)
 
-        // Set up the BottomNavigationView to navigate between activities
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
-
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    // Navigate to Home activity
-                    val homeIntent = Intent(this, Home::class.java)
-                    startActivity(homeIntent)
-                    finish()  // Close current activity (Explore) to avoid stacking
-                    true
-                }
-                R.id.nav_explore -> {
-                    // You are already in Explore activity, so no need to start a new one
-                    true
-                }
-                R.id.nav_payment -> {
-                    // Handle Payment item click if necessary
-                    true
-                }
-                R.id.nav_profile -> {
-                    // Handle Profile item click if necessary
-                    true
-                }
-                else -> false
-            }
+        val btnNavigate: Button = findViewById(R.id.Booknow)
+        btnNavigate.setOnClickListener {
+            val intent = Intent(this, Payment::class.java)
+            startActivity(intent)
         }
 
-        // Optional: Set the default selected item in BottomNavigationView (Home)
-        bottomNavigationView.selectedItemId = R.id.nav_explore
 
         // Handle system bar insets for edge-to-edge layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
